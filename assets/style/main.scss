@@ -1,8 +1,14 @@
 @import "./bsCust";
-
 body {
-	width: 100%;
-	height: auto;
-	padding: 0;
-	margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
 }
