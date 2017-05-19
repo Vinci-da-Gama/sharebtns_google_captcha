@@ -1,18 +1,18 @@
-(function () {
-	var rM = angular.module('appname.router');
+(function() {
+    var rM = angular.module('sbgc.router');
 
-	rM.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.when('', '/');
-		$urlRouterProvider.otherwise('/');
+    rM.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.when('', '/');
+        $urlRouterProvider.otherwise('/');
 
-		$stateProvider
-		.state('home', {
-			url: '/',
-			templateUrl: './_partials/initHome.html',
-			controller: 'homeCtrl',
-			controllerAs: 'hc'
-		});
+        $stateProvider
+            .state('home', {
+                url: '/',
+                templateUrl: './_partials/initHome.html',
+                controller: 'homeCtrl',
+                controllerAs: 'hc'
+            });
 
-	}]);
+    }]);
 
 })();
