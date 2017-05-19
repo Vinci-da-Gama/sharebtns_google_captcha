@@ -1,2 +1,2 @@
-# sharebtns_google_captcha
-sharebtns_google_captcha
+# your_project_Name
+clean_angular1_your_project_Name
