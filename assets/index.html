@@ -7,7 +7,7 @@
     <meta name="description" content="Description of the applicable page in order to make search easy.">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>wcsag_title</title>
+    <title>sharebtns and google recaptcha</title>
     <!-- favicon -->
     <link rel="icon" href="./_img/favicon_0.ico" type="image/x-icon" />
     <!-- compiled-app-js -->
@@ -17,6 +17,30 @@
 </head>
 
 <body ng-app="sbgc">
+
+    <div class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sbgr-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="#">Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse sbgr-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref="home">register/login</a></li>
+                <li><a ui-sref="sharebtns">Share buttons</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+
+
     <div ui-view></div>
 </body>
 

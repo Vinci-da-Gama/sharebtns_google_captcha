@@ -12,6 +12,11 @@
             };
             sessionStorage.setItem('come', JSON.stringify(obj));
         };
+        vm.getSessionStorage = function() {
+            var getObj = angular.toJson(sessionStorage.getItem('come'));
+            console.log('17 -- getObj: ', getObj);
+            console.log('18 -- type of getObj: ', typeof getObj);
+        };
     }]);
 
     ctrlM.controller('homeLoiginCtrl', ['$scope', '$log', function($scope, $log) {
