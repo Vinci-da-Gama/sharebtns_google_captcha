@@ -12,11 +12,11 @@
                 controller: 'homeCtrl',
                 controllerAs: 'hc'
             })
-            .state('home.login', {
-                url: '/login',
-                templateUrl: './_partials/home/login.html',
-                controller: 'homeLoiginCtrl',
-                controllerAs: 'hlc'
+            .state('home.ngGoogleMap', {
+                url: '/ngGoogleMap',
+                templateUrl: './_partials/home/ngGoogleMap.html',
+                controller: 'homeNgGooglemapCtrl',
+                controllerAs: 'hmapc'
             })
             .state('home.register', {
                 url: '/register',

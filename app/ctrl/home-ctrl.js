@@ -19,8 +19,8 @@
         };
     }]);
 
-    ctrlM.controller('homeLoiginCtrl', ['$scope', '$log', function($scope, $log) {
-        $log.log('homeLoiginCtrl...');
+    ctrlM.controller('homeNgGooglemapCtrl', ['$scope', '$log', function($scope, $log) {
+        $log.log('homeNgGooglemapCtrl...');
     }]);
 
     ctrlM.controller('homeRegisterCtrl', ['$scope', '$log', function($scope, $log) {
