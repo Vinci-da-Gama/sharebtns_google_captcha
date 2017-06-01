@@ -21,6 +21,7 @@
 
     ctrlM.controller('homeNgGooglemapCtrl', ['$scope', '$log', 'currentCountryCode', 'NgMap',
         function($scope, $log, currentCountryCode, NgMap) {
+            var vm = this;
             $log.log('homeNgGooglemapCtrl...');
             currentCountryCode.grabCountryCode().then(fetchCountryCode)
                 .catch(function(err) {
@@ -30,6 +31,27 @@
             function fetchCountryCode(res) {
                 console.log('31 -- res is: ', res);
             }
+            vm.positions = [];
+
+            vm.addNewMarker = function(e) {
+                var ll = e.latLng;
+                var newLocation = {
+                    pos: [ll.lat(), ll.lng()]
+                };
+                vm.positions.push(newLocation);
+            }
+
+            vm.buildMapType = "['establishment']";
+            NgMap.getMap().then(function(map) {
+                console.log('46 -- map is: ', map);
+                vm.map = map;
+            });
+            vm.placeChanged = function() {
+                vm.place = this.getPlace();
+                console.log('location', vm.place.geometry.location);
+                vm.map.setCenter(vm.place.geometry.location);
+            }
+
         }
     ]);
 

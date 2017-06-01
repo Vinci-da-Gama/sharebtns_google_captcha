@@ -1,3 +1,8 @@
 <div class="container-fluid">
     <h3>googlemap -- input address and add location mark and autocomplete</h3>
+    <ng-map zoom="14" center="current-position" on-click="hmapc.addNewMarker()">
+        <marker ng-repeat="p in hmapc.positions" position="{{p.pos}}" title="pos: {{p.pos}}"></marker>
+    </ng-map>
+    Enter an address: <br/>
+    <input places-auto-complete size=80 ng-model="hmapc.address" component-restrictions="{country:'AU'}" types="{{buildMapType}}" on-place-changed="hmapc.placeChanged()" />
 </div>
