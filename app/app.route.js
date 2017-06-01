@@ -13,13 +13,13 @@
                 controllerAs: 'hc'
             })
             .state('home.ngGoogleMap', {
-                url: '/ngGoogleMap',
+                url: 'ngGoogleMap',
                 templateUrl: './_partials/home/ngGoogleMap.html',
                 controller: 'homeNgGooglemapCtrl',
                 controllerAs: 'hmapc'
             })
             .state('home.register', {
-                url: '/register',
+                url: 'register',
                 templateUrl: './_partials/home/register.html',
                 controller: 'homeRegisterCtrl',
                 controllerAs: 'hrc'

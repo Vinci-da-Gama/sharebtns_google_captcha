@@ -19,9 +19,19 @@
         };
     }]);
 
-    ctrlM.controller('homeNgGooglemapCtrl', ['$scope', '$log', function($scope, $log) {
-        $log.log('homeNgGooglemapCtrl...');
-    }]);
+    ctrlM.controller('homeNgGooglemapCtrl', ['$scope', '$log', 'currentCountryCode', 'NgMap',
+        function($scope, $log, currentCountryCode, NgMap) {
+            $log.log('homeNgGooglemapCtrl...');
+            currentCountryCode.grabCountryCode().then(fetchCountryCode)
+                .catch(function(err) {
+                    throw err;
+                });
+
+            function fetchCountryCode(res) {
+                console.log('31 -- res is: ', res);
+            }
+        }
+    ]);
 
     ctrlM.controller('homeRegisterCtrl', ['$scope', '$log', function($scope, $log) {
         $log.log('homeRegisterCtrl...');
