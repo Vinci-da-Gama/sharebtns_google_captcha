@@ -1,7 +1,33 @@
 <div>
-    share btns right
-    <a class="btn btn-primary btn-lg" href="#" role="button" socialshare socialshare-provider="twitter" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://www.google.com">
-        facebook_share
+    share btns right -- use it as html &lt;a&gt;
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <a class="btn btn-primary btn-lg" role="button" socialshare socialshare-provider="facebook" socialshare-url="https://www.google.com" socialshare-display="popup">
+                facebook_share
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <a class="btn btn-info btn-lg" socialshare socialshare-provider="email" socialshare-trigger="click" socialshare-subject="Email-angular-social-share" socialshare-body="this is body content" socialshare-to="spurrewards@spurgroup.com.au" socialshare-cc=""
+                socialshare-bcc="">
+                Email
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <a class="btn btn-warning btn-lg" role="button" socialshare socialshare-provider="facebook-messenger" socialshare-url="spurrewards@spurgroup.com.au">
+                Facebook_Messenger
+            </a>
+        </div>
+    </div>
+
+    <img ng-src="{{imgUrl}}" alt="all_socials_angular-socialshare_have" />
+
+    <br />
+    <a class="btn btn-default" twitter role="button">
+        twitter_share
     </a>
+    <p>From server would be trigger at beginng, in chrome it would be blocked as harmed popup. you can see it in safari.</p>
+    <p>Share button from Config has attribute -- trigger. kelin+0@csbengage.com -- https://www.addthis.com/</p>
+
 
 </div>

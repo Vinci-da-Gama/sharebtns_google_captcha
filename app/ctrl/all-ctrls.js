@@ -67,8 +67,20 @@
         $log.log('sharebtnsLeftCtrl...');
     }]);
 
-    ctrlM.controller('sharebtnsRightCtrl', ['$scope', '$log', function($scope, $log) {
+    ctrlM.controller('sharebtnsRightCtrl', ['$scope', '$log', 'Socialshare', function($scope, $log, Socialshare) {
         $log.log('sharebtnsRightCtrl...');
+        $scope.imgUrl = './_img/allSocialsBtns.png';
+
+        Socialshare.share({
+            'provider': 'twitter',
+            'attrs': {
+                'socialshareUrl': 'https://www.google.com',
+                'socialshareText': 'twitter shared text.',
+                'socialshareVia': 'TheUserName',
+                'socialshareHashtags': 'twitter'
+            }
+        });
+
     }]);
 
 })();
